@@ -1,0 +1,66 @@
+@host = http://localhost:3000
+
+
+#####
+
+# @name postBook
+POST  {{host}}/books
+Content-Type: application/json
+
+{
+  "isbn": "0691161518",
+  "amazon_url": "http://a.co/eobPtX2",
+  "author": "Matthew Lane",
+  "language": "english",
+  "pages": 264,
+  "publisher": "Princeton University Press",
+  "title": "Power-Up: Unlocking the Hidden Mathematics in Video Games",
+  "year": 2017
+}
+
+#####
+
+# @name getBooks
+GET  {{host}}/books
+Content-Type: application/json
+
+{
+ 
+}
+
+#####
+
+# @name getBook
+GET  {{host}}/books/0691161518
+Content-Type: application/json
+
+{
+ 
+}
+
+####
+
+# @name updateBook
+PUT  {{host}}/books/0691161518
+Content-Type: application/json
+
+{
+  "amazon_url": "http://a.co/eobPtX2",
+  "author": "Update",
+  "language": "Update",
+  "pages": 5,
+  "publisher": "Update",
+  "title": "Update",
+  "year": 2000
+}
+
+####
+
+
+# @name deleteBook
+DELETE  {{host}}/books/0691161518
+Content-Type: application/json
+
+{
+
+}
